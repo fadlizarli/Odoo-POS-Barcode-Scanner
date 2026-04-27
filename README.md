@@ -1,6 +1,6 @@
 # Odoo POS Camera Barcode Scanner
 
-A lightweight barcode scanner for Odoo Point of Sale using your device's camera.
+A lightweight barcode scanner for Odoo Point of Sale using your mobile's camera.
 
 Originally developed by [Potacado](https://github.com/Potacado/Odoo-POS-Barcode-Scanner) for Odoo 16. This fork has been updated for **Odoo 17** compatibility.
 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="pos_camera_scanner.CameraPopup" owl="1">
+        <div class="popup camera-popup">
+            <div id="scanner_status" style="padding:8px;text-align:center;background:#e0e0e0;margin-bottom:8px;border-radius:4px;">
+                Initializing...
+            </div>
+            <div id="interactive" class="viewport" style="width:100%;max-height:300px;overflow:hidden;position:relative;">
+            </div>
+            <div class="footer" style="margin-top:8px;text-align:center;">
+                <button class="cancel btn btn-secondary" t-on-click="cancel">Close</button>
+            </div>
+        </div>
+    </t>
+    <t t-name="pos_camera_scanner.CameraScanButton" t-inherit="point_of_sale.ProductScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('pads')]" position="before">
+            <button class="btn btn-warning w-100 fw-bolder py-2" t-on-click="onClickCameraScan" t-if="ui.isSmall">
+                <i class="fa fa-camera me-2"/>Scan Barcode
+            </button>
+        </xpath>
+        <xpath expr="//div[hasclass('control-buttons')]" position="inside">
+            <button class="btn btn-light control-button" t-on-click="onClickCameraScan" t-if="!ui.isSmall">
+                <i class="fa fa-camera me-1"/> Scan
+            </button>
+        </xpath>
+    </t>
+</templates>
